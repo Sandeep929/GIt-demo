@@ -14,7 +14,7 @@ int main()
      printf("Number stored in array\n");
      for(i=0;i<size;i++)
         {
-            printf("%d",a[i]);
+            printf("%d\n",a[i]);
         }
     printf("Enter the number which you want to insert\n");
     scanf("%d",&num);
@@ -28,7 +28,7 @@ int main()
         size++;
         for(i=0;i<size;i++)
             {
-                printf("%d",a[i]);
+                printf("%d\n",a[i]);
             }
   return 0;
 }
