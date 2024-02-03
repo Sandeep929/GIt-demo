@@ -22,6 +22,34 @@ int main()
         {
             printf("%d\n",a[i]);
         }
+        printf("If Delete then any number then enter 0 to Insert enter 1\n");
+        int s;
+        scanf("%d",&s);
+        if(s == 0)
+        {
+          printf("Enter the position of number to delete\n");
+          scanf("%d",&pos);
+            if(pos<=0 || pos>size)
+            {
+              printf("Invalid Position\n");
+            }
+            else
+            {
+          for(i=pos-1;i<=size-1;i++)
+          {
+            a[i] = a[i+1];
+          }
+          size--;
+          printf("Value successfully deleted\n");
+          printf("Here is the current sequence\n");
+            for(i=0;i<=size-1;i++)
+            {
+              printf("%d\n",a[i]);
+            }
+            }
+        }
+        else
+         {
     printf("Enter the number which you want to insert\n");
     scanf("%d",&num);
     printf("Enter the position where you want to insert in array\n");
@@ -43,6 +71,8 @@ int main()
                 printf("%d\n",a[i]);
             }
         }
-}            
+         }
+} 
+
   return 0;
 }
