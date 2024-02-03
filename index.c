@@ -2,8 +2,14 @@
 int main()
 {
     int a[50],size,i,num,pos;
-    printf("Enter the size of array\n");
+   printf("Enter the size of array\n");
     scanf("%d",&size);
+    if(size<=0 || size>50)
+{
+    printf("Invalid Size");
+}
+    else
+{
     printf("Enter the elements of array\n");
     for(i=0;i<size;i++)
        { 
@@ -20,7 +26,13 @@ int main()
     scanf("%d",&num);
     printf("Enter the position where you want to insert in array\n");
     scanf("%d",&pos);
-        for(i=size-1;i>=pos-1;i--)
+        if(pos<=0 || pos>size)
+            {
+                printf("Invalid Position");
+            }
+        else
+        {
+            for(i=size-1;i>=pos-1;i--)
             {
                 a[i+1]=a[i];
             }
@@ -30,5 +42,7 @@ int main()
             {
                 printf("%d\n",a[i]);
             }
+        }
+}            
   return 0;
 }
